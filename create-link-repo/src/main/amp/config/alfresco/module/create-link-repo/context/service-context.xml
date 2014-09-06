@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE beans PUBLIC '-//SPRING//DTD BEAN//EN' 'http://www.springframework.org/dtd/spring-beans.dtd'>
+
+<beans>
+
+	<bean id="webscript.io.github.skomarica.doclib.create-link.post" class="io.github.skomarica.alfresco.repo.web.scripts.doclib.CreateLinkPost"
+		parent="webscript">
+		<property name="nodeService">
+			<ref bean="NodeService" />
+		</property>
+		<property name="dictionaryService">
+			<ref bean="DictionaryService" />
+		</property>
+		<property name="siteService">
+			<ref bean="SiteService" />
+		</property>
+		<property name="searchService">
+			<ref bean="SearchService" />
+		</property>
+		<property name="messageService">
+			<ref bean="MessageService" />
+		</property>
+		<property name="namespaceService">
+			<ref bean="NamespaceService" />
+		</property>
+	</bean>
+
+</beans>
