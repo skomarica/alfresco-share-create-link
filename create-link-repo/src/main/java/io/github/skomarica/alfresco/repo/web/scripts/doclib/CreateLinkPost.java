@@ -46,7 +46,7 @@ import org.springframework.extensions.webscripts.WebScriptRequest;
  */
 public class CreateLinkPost extends DeclarativeWebScript
 {
-	protected final Log logger = LogFactory.getLog(CreateLinkPostTest.class);
+	protected final Log logger = LogFactory.getLog(CreateLinkPost.class);
 
 	private static final String LINK_NODE_EXTENSION = ".url";
 	private static final String MSG_LINK_TO = "link_to";
