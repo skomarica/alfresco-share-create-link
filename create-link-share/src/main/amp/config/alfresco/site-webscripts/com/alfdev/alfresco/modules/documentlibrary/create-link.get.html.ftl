@@ -3,5 +3,5 @@
    This template only brings in new i18n-messages.
 -->
 <script type="text/javascript">//<![CDATA[
-   Alfresco.util.addMessages(${messages}, "Alfresco.module.custom.DoclibCreateLink");
+   Alfresco.util.addMessages(${messages}, "Alfresco.module.alfdev.DoclibCreateLink");
 //]]></script>

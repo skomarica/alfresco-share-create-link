@@ -1,4 +1,4 @@
-package io.github.skomarica.alfresco.repo.web.scripts.doclib;
+package com.alfdev.alfresco.repo.web.scripts.doclib;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -36,10 +36,17 @@ import org.springframework.extensions.webscripts.WebScriptException;
 import org.springframework.extensions.webscripts.WebScriptRequest;
 
 /**
- * CreateLinkPost java backend controller. Web script accepts destination folder nodeRef as URL-path parameter. JSON
- * contains list of <code>nodeRefs</code> to be linked and <code>parentId</code> (parent folder nodeRef of specified
- * nodeRefs). Creation of both file and folder links supported. Implementation based on java-script controller for
- * <code>copy-to.post.json.js</code> Alfresco's API
+ * <p>
+ * <code>CreateLinkPost</code> java web script controller. Web script accepts destination folder nodeRef as URL-path
+ * parameter. JSON body contains list of <code>nodeRefs</code> to be linked and <code>parentId</code> (parent folder
+ * nodeRef of specified nodeRefs). Creation of both file and folder links supported.
+ * </p>
+ * 
+ * <p>
+ * Implementation is based on Alfresco REST API java-script controller <code>copy-to.post.json.js</code> (execution
+ * flow, parameters checks and generating result part) and Alfresco Explorer's "Paste As Link" Shelf's functionality
+ * (link creation part).
+ * </p>
  * 
  * @author Sinisa Komarica
  * 
@@ -218,7 +225,7 @@ public class CreateLinkPost extends DeclarativeWebScript
 
 		// LINK operation
 		if (logger.isDebugEnabled())
-			logger.debug("Attempting to link node: " + sourceRef + " into node: " + destRef);
+			logger.debug("Attempting to create a link to node: " + sourceRef + " within a folder: " + destRef);
 
 		// we create a special Link Object node that has a property to reference the original
 		// create the node using the nodeService

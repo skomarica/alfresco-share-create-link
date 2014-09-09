@@ -1,12 +1,12 @@
  (function() {
     YAHOO.Bubbling.fire("registerAction",
     {
-        actionName: "onActionCreateLink",
-        fn: function custom_onActionCreateLink(record) {
+        actionName: "onAlfdevActionCreateLink",
+        fn: function alfdev_onActionCreateLink(record) {
 		
          if (!this.modules.createLink)
          {
-            this.modules.createLink = new Alfresco.module.custom.DoclibCreateLink(this.id + "-createLink");
+            this.modules.createLink = new Alfresco.module.alfdev.DoclibCreateLink(this.id + "-createLink");
          }
 
          var DLGF = Alfresco.module.DoclibGlobalFolder;

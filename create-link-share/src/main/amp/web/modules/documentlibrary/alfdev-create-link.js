@@ -1,19 +1,19 @@
-Alfresco.module.custom = Alfresco.module.custom || {};
+Alfresco.module.alfdev = Alfresco.module.alfdev || {};
 
 /**
  * Document Library "Create Link" module for Document Library.
  * 
- * @namespace Alfresco.module.custom
- * @class Alfresco.module.custom.DoclibCreateLink
+ * @namespace Alfresco.module.alfdev
+ * @class Alfresco.module.alfdev.DoclibCreateLink
  */
 (function()
 {
-   Alfresco.module.custom.DoclibCreateLink = function(htmlId)
+   Alfresco.module.alfdev.DoclibCreateLink = function(htmlId)
    {
-      Alfresco.module.custom.DoclibCreateLink.superclass.constructor.call(this, htmlId);
+      Alfresco.module.alfdev.DoclibCreateLink.superclass.constructor.call(this, htmlId);
 
       // Re-register with our own name
-      this.name = "Alfresco.module.custom.DoclibCreateLink";
+      this.name = "Alfresco.module.alfdev.DoclibCreateLink";
       var DLGF = Alfresco.module.DoclibGlobalFolder;
 
       Alfresco.util.ComponentManager.reregister(this);
@@ -29,13 +29,13 @@ Alfresco.module.custom = Alfresco.module.custom || {};
             DLGF.VIEW_MODE_REPOSITORY,
             DLGF.VIEW_MODE_USERHOME
          ],
-         extendedTemplateUrl: Alfresco.constants.URL_SERVICECONTEXT + "modules/documentlibrary/custom/create-link"
+         extendedTemplateUrl: Alfresco.constants.URL_SERVICECONTEXT + "modules/documentlibrary/alfdev/create-link"
       });
 
       return this;
    };
 
-   YAHOO.extend(Alfresco.module.custom.DoclibCreateLink, Alfresco.module.DoclibGlobalFolder,
+   YAHOO.extend(Alfresco.module.alfdev.DoclibCreateLink, Alfresco.module.DoclibGlobalFolder,
    {
       /**
        * Set multiple initialization options at once.
@@ -43,19 +43,19 @@ Alfresco.module.custom = Alfresco.module.custom || {};
        * @method setOptions
        * @override
        * @param obj {object} Object literal specifying a set of options
-       * @return {Alfresco.module.custom.DoclibCreateLink} returns 'this' for method chaining
+       * @return {Alfresco.module.alfdev.DoclibCreateLink} returns 'this' for method chaining
        */
       setOptions: function DLCL_setOptions(obj)
       {
          var myOptions = {};
 
-         myOptions.dataWebScript = "custom/create-link";
+         myOptions.dataWebScript = "alfdev/create-link";
          
          myOptions.viewMode = Alfresco.util.isValueSet(this.options.siteId) ? Alfresco.module.DoclibGlobalFolder.VIEW_MODE_RECENT_SITES : Alfresco.module.DoclibGlobalFolder.VIEW_MODE_REPOSITORY;
          // Actions module
          this.modules.actions = new Alfresco.module.DoclibActions();
 
-         return Alfresco.module.custom.DoclibCreateLink.superclass.setOptions.call(this, YAHOO.lang.merge(myOptions, obj));
+         return Alfresco.module.alfdev.DoclibCreateLink.superclass.setOptions.call(this, YAHOO.lang.merge(myOptions, obj));
       },
 
       /**
@@ -96,7 +96,7 @@ Alfresco.module.custom = Alfresco.module.custom || {};
       onExtendedTemplateLoaded: function DLCL_onExtendedTemplateLoaded(response, superClassResponse)
       {
          // Now that we have loaded this components i18n messages let the original template get rendered.
-         Alfresco.module.custom.DoclibCreateLink.superclass.onTemplateLoaded.call(this, superClassResponse);
+         Alfresco.module.alfdev.DoclibCreateLink.superclass.onTemplateLoaded.call(this, superClassResponse);
       },
 
       /**
@@ -276,10 +276,10 @@ Alfresco.module.custom = Alfresco.module.custom || {};
       _showDialog: function DLCL__showDialog()
       {
          this.widgets.okButton.set("label", this.msg("button"));
-         return Alfresco.module.custom.DoclibCreateLink.superclass._showDialog.apply(this, arguments);
+         return Alfresco.module.alfdev.DoclibCreateLink.superclass._showDialog.apply(this, arguments);
       }
    });
 
    /* Dummy instance to load optional YUI components early */
-   var dummyInstance = new Alfresco.module.custom.DoclibCreateLink("null");
+   var dummyInstance = new Alfresco.module.alfdev.DoclibCreateLink("null");
 })();

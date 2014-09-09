@@ -1,0 +1,5 @@
+<webscript>
+  <shortname>alfdev-create-link</shortname>
+  <description>Create Link module for Document Library</description>
+  <url>/modules/documentlibrary/alfdev/create-link</url>
+</webscript>

@@ -3,15 +3,15 @@
 
 <beans>
 
-	<bean id="custom.resourceBundles" class="org.alfresco.i18n.ResourceBundleBootstrapComponent">
+	<bean id="alfdev.resourceBundles" class="org.alfresco.i18n.ResourceBundleBootstrapComponent">
 		<property name="resourceBundles">
 			<list>
-				<value>alfresco.module.create-link-repo.messages.custom-repository</value>
+				<value>alfresco.module.create-link-repo.messages.alfdev-repository</value>
 			</list>
 		</property>
 	</bean>
 
-	<bean id="webscript.io.github.skomarica.doclib.create-link.post" class="io.github.skomarica.alfresco.repo.web.scripts.doclib.CreateLinkPost"
+	<bean id="webscript.com.alfdev.doclib.create-link.post" class="com.alfdev.alfresco.repo.web.scripts.doclib.CreateLinkPost"
 		parent="webscript">
 		<property name="nodeService">
 			<ref bean="NodeService" />
