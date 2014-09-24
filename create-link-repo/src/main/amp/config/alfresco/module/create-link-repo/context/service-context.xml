@@ -26,7 +26,7 @@
 			<ref bean="SearchService" />
 		</property>
 		<property name="messageService">
-			<ref bean="MessageService" />
+			<ref bean="messageService" />
 		</property>
 		<property name="namespaceService">
 			<ref bean="NamespaceService" />
