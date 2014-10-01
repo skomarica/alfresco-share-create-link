@@ -47,6 +47,7 @@ Although the creation of links to folder is supported by backend mechanism, I di
 
 > #### Why am I getting an error "Link creation could not be completed"?
 Two common reasons for getting such error message are:
-1. You have not correctly installed "create-link-repo.amp" to "alfresco.war"
-2. You already have a link with the same name within a selected folder
+
+> 1. You have not correctly installed "create-link-repo.amp" to "alfresco.war"
+> 2. You already have a link with the same name within a selected folder
 
