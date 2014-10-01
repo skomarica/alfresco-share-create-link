@@ -28,6 +28,10 @@ Using "Create Link" action is similar to using "Copy to..." or "Move to..." out-
 2. Select a target folder where you want your link to be created and confirm the dialog (you will need write permissions on selected folder)
 3. A node of type "app:filelink" pointing to "My File.docx" will be created within the selected folder, with appropriate thumbnail and name like "Link to: My File.docx"
 
+License, support, maintenance
+-----------------------------
+This is an open-source project, distributed under Apache License (v2.0). It's supplied free of charge, with no formal support, maintenance or warranty. If you find a bug related to this functionality or you have some nice enhancement in mind, feel free to raise an issue or, even better, implement a solution and contribute it back to the project.
+
 FAQ
 ---
 > #### What is an AMP file and how can I install it?
@@ -40,3 +44,9 @@ There is a great [tutorial](http://ecmarchitect.com/alfresco-developer-series-tu
 Although the creation of links to folder is supported by backend mechanism, I did not intentionally add "Create Link" action to the folder-browse and folder-details action groups. The reason for this is the way Alfresco Share application works with links (even with those created using Alfresco Explorer Shelf "Paste as Link" functionality):
 * Document link points to the document details view which is fine and expected
 * Folder link points to the folder details view and clicking the folder link will not navigate you to the linked folder path, displaying folder's content, but to the folder details view
+
+> #### Why am I getting an error "Link creation could not be completed"?
+Two common reasons for getting such error message are:
+1. You have not correctly installed "create-link-repo.amp" to "alfresco.war"
+2. You already have a link with the same name within a selected folder
+
