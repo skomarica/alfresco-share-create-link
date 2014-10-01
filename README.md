@@ -46,8 +46,7 @@ Although the creation of links to folder is supported by backend mechanism, I di
 * Folder link points to the folder details view and clicking the folder link will not navigate you to the linked folder path, displaying folder's content, but to the folder details view
 
 > #### Why am I getting an error "Link creation could not be completed"?
-Two common reasons for getting such error message are:
-
-> 1. You have not correctly installed "create-link-repo.amp" to "alfresco.war"
-> 2. You already have a link with the same name within a selected folder
+Common reasons for getting such error message are:
+* You have not correctly installed "create-link-repo.amp" to "alfresco.war"
+* You already have a link with the same name within a selected folder
 
